@@ -8,7 +8,7 @@ using PetProject.Identity.Data.Identity;
 
 #nullable disable
 
-namespace PetProject.Identity.Migrations.IdentityServer.Identity
+namespace PetProject.Identity.Migrations.Identity.MyIdentity
 {
     [DbContext(typeof(MyIdentityDbContext))]
     partial class MyIdentityDbContextModelSnapshot : ModelSnapshot
@@ -18,10 +18,10 @@ namespace PetProject.Identity.Migrations.IdentityServer.Identity
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("Identity")
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "6.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -56,7 +56,7 @@ namespace PetProject.Identity.Migrations.IdentityServer.Identity
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -146,7 +146,7 @@ namespace PetProject.Identity.Migrations.IdentityServer.Identity
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");

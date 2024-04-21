@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PetProject.Identity.Migrations.IdentityServer.Identity
+namespace PetProject.Identity.Migrations.Identity.MyIdentity
 {
-    /// <inheritdoc />
-    public partial class InitIdentityDb : Migration
+    public partial class InitMyIdentity : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
@@ -219,7 +217,6 @@ namespace PetProject.Identity.Migrations.IdentityServer.Identity
                 filter: "[NormalizedUserName] IS NOT NULL");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

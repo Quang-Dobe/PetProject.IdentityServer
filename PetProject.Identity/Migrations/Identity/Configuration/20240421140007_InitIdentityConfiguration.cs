@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PetProject.Identity.Migrations.IdentityServer.Configuration
+namespace PetProject.Identity.Migrations.Identity.Configuration
 {
-    /// <inheritdoc />
-    public partial class InitIdentityConfig : Migration
+    public partial class InitIdentityConfiguration : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
@@ -654,7 +652,6 @@ namespace PetProject.Identity.Migrations.IdentityServer.Configuration
                 unique: true);
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

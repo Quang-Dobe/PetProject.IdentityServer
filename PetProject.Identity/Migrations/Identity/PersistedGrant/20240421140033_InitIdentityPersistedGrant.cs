@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PetProject.Identity.Migrations.IdentityServer.Operation
+namespace PetProject.Identity.Migrations.Identity.PersistedGrant
 {
-    /// <inheritdoc />
-    public partial class InitIdentityOperation : Migration
+    public partial class InitIdentityPersistedGrant : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
@@ -87,7 +85,6 @@ namespace PetProject.Identity.Migrations.IdentityServer.Operation
                 columns: new[] { "SubjectId", "SessionId", "Type" });
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
